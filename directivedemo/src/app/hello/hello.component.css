@@ -1,0 +1,20 @@
+div {
+border: solid thin black;
+max-width: 300px;
+padding: 5px;
+}
+
+
+/*for the hide-show demo*/
+.styled {
+background-color:yellow;
+}
+
+.evenrow{
+	background-color: yellow;
+} 
+
+.firstrow{
+	
+	color: red;
+}

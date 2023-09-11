@@ -1,0 +1,118 @@
+<div>
+<!--
+<p>{{greeting}}</p>
+<button (click)="showGreeting()">Click Me!</button>
+-->
+
+<br>
+<!--
+<p>Full: {{fullName()}}</p>
+-->
+<!--
+<img [src]="imageURL"/>
+<p><a [href]="website">View Website</a></p>
+<button [disabled]="!policyAccepted">Submit</button>
+-->
+<!-- if string value -->
+<!--
+
+<img src="{{imageURL}}"/>
+
+-->
+
+<!--
+<div [innerHTML]="description"></div>
+<div>{{description}}</div>
+-->
+
+<!--
+<div (mousemove)="showCoordinates($event)">
+X: {{xCoord}} Y: {{yCoord}}
+</div>
+-->
+
+<!--
+<input type="checkbox"
+[checked]="policyAccepted"
+(change)="policyAccepted = $event.target.checked"/>
+Accept policy
+<button [disabled]="!policyAccepted">Register</button>
+-->
+
+<!--
+<button (click)="policyShown = !policyShown">Show Policy</button>
+-->
+
+<!--
+<button (click)="policyShown = true">Show Policy</button>
+
+<p [ngClass]="{'policy-hidden': !policyShown}">
+Lorem, ipsum...
+</p>
+-->
+
+
+<!--
+<div [ngStyle]="{'background-color': color}">
+I can be styled
+</div>
+<select (change)="color=$event.target.value">
+<option value="gold">Gold</option>
+<option value="violet">Violet</option>
+<option value="ivory">Ivory</option>
+</select>
+-->
+
+<!--
+<input type="checkbox"
+[checked]="acceptPolicy"
+(change)="acceptPolicy=$event.target.checked"/>
+Accept policy
+<p *ngIf="!acceptPolicy">Please accept policy to register with us.</p>
+<button [disabled]="!acceptPolicy">Register</button>
+-->
+
+<!--
+<p *ngFor="let p of pets">{{p.name}} ({{p.type}})</p>
+-->
+
+<!--can't modify constants directly, added 1, created .evenrow in css, added first-->
+<!-- all three refreshed-->
+
+<!--
+<li *ngFor="let pet of pets;
+let i = index; let e = even; let f = first;"
+[ngClass]="{evenrow:e, firstrow: f}" >
+{{i + 1}}-{{pet.type}}
+</li>
+-->
+
+<!--
+<p *ngFor="let p of pets">
+{{p.name}} ({{p.type}})
+<button (click)="deletePet(p)">Delete</button>
+</p>
+-->
+
+<!-- only one refreshed-->
+<!--
+<p *ngFor="let p of pets; trackBy: trackByPetId">
+{{p.name}} ({{p.type}})
+</p>
+-->
+
+<!--
+<div [ngSwitch]="selectedPage">
+<p *ngSwitchCase="1">About</p>
+<p *ngSwitchCase="2">Contact</p>
+<p *ngSwitchCase="3">Store</p>
+<p *ngSwitchDefault>Home</p>
+</div>
+<button (click)="next()">Next</button>
+-->
+<!--instead of ngModel-->
+<!--
+<input type="text" #userId/><br/>
+<button (click)="handleClick(userId)">Submit</button>
+-->
+</div>
