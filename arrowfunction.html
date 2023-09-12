@@ -1,0 +1,157 @@
+<script>
+// Traditional Anonymous Function
+(function (a) {
+  return a + 100;
+});
+
+// Arrow Function Break Down
+
+// 1. Remove the word "function" and place arrow between the argument and opening body bracket
+(a) => {
+  return a + 100;
+};
+
+// 2. Remove the body braces and word "return" — the return is implied.
+(a) => a + 100;
+
+// 3. Remove the argument parentheses
+a => a + 100;
+
+//The { braces } and ( parentheses ) and "return" are required in some cases.
+
+//For example, if you have multiple arguments or no arguments, you'll need to re-introduce parentheses around the arguments:
+
+// Traditional Anonymous Function
+(function (a, b) {
+  return a + b + 100;
+});
+
+// Arrow Function
+(a, b) => a + b + 100;
+
+const a = 4;
+const b = 2;
+
+// Traditional Anonymous Function (no arguments)
+(function() {
+  return a + b + 100;
+});
+
+// Arrow Function (no arguments)
+() => a + b + 100;
+
+//Likewise, if the body requires additional lines of processing, you'll need to re-introduce braces PLUS the "return" (arrow functions do not magically guess what or when you want to "return"):
+
+// Traditional Anonymous Function
+(function (a, b) {
+  const chuck = 42;
+  return a + b + chuck;
+});
+
+// Arrow Function with Extra Lines
+(a, b) => {
+  const chuck = 42;
+  return a + b + chuck;
+};
+
+
+//And finally, for named functions we treat arrow expressions like variables:
+
+// Traditional Function
+function bob(a) {
+  return a + 100;
+}
+
+// Named Arrow Function
+const bob2 = (a) => a + 100;
+
+
+//Advanced
+//To return an object literal expression requires parentheses around expression:
+
+(params) => ({ foo: "a" }) // returning the object { foo: "a" }
+
+//Rest parameters are supported, and always require parentheses:
+
+(a, b, ...r) => expression
+
+//Default parameters are supported, and always require parentheses:
+
+(a=400, b=20, c) => expression
+
+//Destructuring within params is supported, and always requires parentheses:
+
+([a, b] = [10, 20]) => a + b;  // result is 30
+({ a, b } = { a: 10, b: 20 }) => a + b; // result is 30
+
+
+/*
+
+//Don't use arrow function for:
+
+//Arrow functions do not have their own this.
+
+//Arrow function expressions are best suited for non-method functions.
+
+//The call, apply and bind methods are NOT suitable as arrow functions 
+
+
+No binding of arguments
+Arrow functions do not have their own arguments object. Thus, in this example, arguments is a reference to the arguments of the enclosing scope:
+
+const arguments = [1, 2, 3];
+const arr = () => arguments[0];
+
+arr(); // 1
+
+function foo(n) {
+  const f = () => arguments[0] + n; // foo's implicit arguments binding. arguments[0] is n
+  return f();
+}
+
+foo(3); // 3 + 3 = 6
+
+Note: You cannot declare a variable called arguments in strict mode, so the code above would be a syntax error. This makes the scoping effect of arguments much easier to reason about.
+
+In most cases, using rest parameters is a good alternative to using an arguments object.
+
+function foo(n) {
+  const f = (...args) => args[0] + n;
+  return f(10);
+}
+
+foo(1); // 11
+
+
+//Arrow functions cannot be used as constructors and will throw an error when used with new.
+
+const Foo = () => {};
+const foo = new Foo(); // TypeError: Foo is not a constructor
+
+
+
+
+
+
+//Use of prototype property
+//Arrow functions do not have a prototype property.
+
+const Foo = () => {};
+console.log(Foo.prototype); // undefined
+
+//The yield keyword may not be used in an arrow function's body (except when permitted within functions further nested within it). As a consequence, arrow functions cannot be used as generators.
+
+//Line breaks
+//An arrow function cannot contain a line break between its parameters and its arrow.
+
+const func = (a, b, c)
+  => 1;
+// SyntaxError: Unexpected token '=>'
+
+
+
+*/
+
+
+
+</script>

@@ -1,0 +1,41 @@
+<script>
+//map
+const materials = [
+  'Hydrogen',
+  'Helium',
+  'Lithium',
+  'Beryllium'
+];
+
+console.log(materials.map(material => material.length));
+// expected output: Array [8, 6, 7, 9]
+
+
+
+//filter
+
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter(word => word.length > 6);
+
+console.log(result);
+// expected output: Array ["exuberant", "destruction", "present"]
+
+
+//forEach
+
+const array1 = ['a', 'b', 'c'];
+
+array1.forEach(element => console.log(element));
+
+// expected output: "a"
+// expected output: "b"
+// expected output: "c"
+
+
+
+
+
+
+
+</script>

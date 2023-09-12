@@ -1,0 +1,37 @@
+<script>
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  speak() {
+    console.log(`${this.name} makes a noise.`);
+  }
+}
+/*
+ var a1 = new Animal("my pet")
+ a1.speak()
+console.log(a1.name);
+*/
+
+class Dog extends Animal {
+  constructor(name) {
+    super(name); // call the super class constructor and pass in the name parameter
+  }
+
+  speak() {
+    console.log(`${this.name} barks.`);
+  }
+}
+
+/*
+var d1 = new Dog("my pet")
+ d1.speak()
+console.log(d1.name);
+*/
+
+const d = new Dog('Mitzie');
+//typeof d 
+//d instanceof Dog
+d.speak(); // Mitzie barks.
+
+</script>
