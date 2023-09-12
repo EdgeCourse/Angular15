@@ -1,0 +1,15 @@
+<form (ngSubmit)="submitForm()" #myForm="ngForm">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" ngModel required>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" ngModel required email>
+  </div>
+  <div>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" ngModel></textarea>
+  </div>
+  <button type="submit" [disabled]="!myForm.valid">Submit</button>
+</form>

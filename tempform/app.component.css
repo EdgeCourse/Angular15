@@ -1,0 +1,36 @@
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  div {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+
+  input.ng-invalid{
+    border: red 2px solid;
+    opacity: 0.5;
+  }
+
+  input.ng-untouched{
+    border: black 1px solid;
+    opacity: 1.0;
+  }
