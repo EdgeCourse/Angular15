@@ -1,0 +1,18 @@
+
+    <form [formGroup]="dynamicForm">
+<div class="form-group">
+      <label for="choice" class="form-control">Choose an option:</label>
+      <select formControlName="choice" id="choice" class="form-control">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+      </select>
+</div>
+      <div formArrayName="additionalFields" class="form-group">
+        <div *ngFor="let field of additionalFields.controls; let i = index">
+          <input [formControlName]="i" placeholder="Field {{ i + 1 }}" class="form-control">
+        </div>
+      </div>
+    </form>
+
+    <button (click)="addAdditionalField()" class="form-control">Add Field</button>
+  
