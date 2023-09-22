@@ -1,0 +1,38 @@
+p, button, div, input{
+    font-family: Arial;
+}
+
+input, button{
+    background-color: #f2f2f2;
+    padding: 2%;
+}
+
+/* Reset default list styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style list items as horizontal menu items */
+nav ul li {
+    display: inline;
+    margin-right: 20px; /* Adjust spacing between menu items */
+}
+
+/* Style anchor links */
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Link color */
+    font-weight: bold;
+    padding: 5px 10px; /* Add padding to make links clickable */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: #f2f2f2; /* Background color for links */
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+}
+
+/* Style anchor links on hover */
+nav ul li a:hover {
+    background-color: #333; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+}

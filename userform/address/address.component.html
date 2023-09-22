@@ -1,0 +1,16 @@
+<div>
+    <label for="selectedCountry">Country:</label>
+    <select id="selectedCountry" [(ngModel)]="selectedCountry" name="selectedCountry">
+      <option value="Canada">Canada</option>
+      <option value="USA">USA</option>
+    </select>
+  </div>
+  
+  <div>
+    <label for="postalCode">Postal Code / Zip Code:</label>
+    <input type="text" id="postalCode" [(ngModel)]="postalCode" name="postalCode"
+      (blur)="validatePostalCode()">
+    <div *ngIf="postalCodeError" class="error">Invalid postal code.</div>
+  </div>
+  
+  <input type="submit">
